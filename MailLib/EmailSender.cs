@@ -128,6 +128,7 @@ namespace MailLib
 
         /// <summary>
         /// Adds a To: address to the message.
+        /// To add multiple To: recipients, call this once for each recipient email address.
         /// </summary>
         /// <param name="email">Email address of the recipient</param>
         /// <param name="name">Name of the recipient</param>
@@ -143,6 +144,7 @@ namespace MailLib
 
         /// <summary>
         /// Adds a CC address to the message.
+        /// To add multiple CC: recipients, call this once for each recipient email address.
         /// </summary>
         /// <param name="email">Email address of the recipient</param>
         /// <param name="name">Name of the recipient</param>
@@ -158,6 +160,7 @@ namespace MailLib
 
         /// <summary>
         /// Adds a BCC address to the message.
+        /// To add multiple BCC: recipients, call this once for each recipient email address.
         /// </summary>
         /// <param name="email">Email address of the recipient</param>
         /// <param name="name">Name of the recipient</param>
@@ -187,6 +190,7 @@ namespace MailLib
         
         /// <summary>
         /// Adds a Reply-To address for the message.
+        /// To add multiple Reply-To addresses, call this once for each Reply-To email address.
         /// </summary>
         /// <param name="email">Email address of the reply-to</param>
         /// <param name="name">Name of the reply-to</param>
