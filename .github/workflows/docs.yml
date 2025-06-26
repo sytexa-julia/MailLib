@@ -1,0 +1,23 @@
+# .github/workflows/docs.yml
+name: Generate Doxygen docs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  doxygen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
+      - name: Run Doxygen
+        uses: doxygen/doxygen-action@v2
+        with:
+          # Path to your Doxyfile (defaults to ./Doxyfile)
+          doxyfile-path: MailLib/Doxyfile
+          # Optionally upload HTML to GitHub Pages
+          publish-gh-pages: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
