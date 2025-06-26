@@ -25,7 +25,7 @@ jobs:
       - name: Generate docs
         uses: mattnotmitt/doxygen-action@v1.9.5
         with:
-          doxyfile: MailLib/Doxyfile
+          doxyfile-path: MailLib/Doxyfile
           output: docs/html
 
       # 4. Deploy to gh-pages
@@ -33,5 +33,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/html
+          publish_dir: MailLib/docs/html
           publish_branch: gh-pages
