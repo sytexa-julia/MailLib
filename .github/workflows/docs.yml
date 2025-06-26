@@ -1,6 +1,9 @@
 # .github/workflows/docs.yml
 name: "Build & Publish Doxygen Docs"
 
+permissions:
+  contents: write
+  
 on:
   push:
     branches:
